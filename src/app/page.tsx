@@ -55,7 +55,7 @@ export default function HomePage() {
                   Dispute Triage Assistant
                 </h1>
                 <p className="text-sm text-gray-600">
-                  AI-powered routing and context for dispute analysts — not a decision-maker
+                  AI-powered routing and context for dispute analysts
                 </p>
               </div>
             </div>
