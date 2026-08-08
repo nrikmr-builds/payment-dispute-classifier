@@ -1,0 +1,35 @@
+spring:
+  application:
+    name: dispute-classifier
+  datasource:
+    url: jdbc:postgresql://localhost:5432/dispute_classifier
+    username: ${DB_USERNAME:postgres}
+    password: ${DB_PASSWORD:postgres}
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    open-in-view: false
+
+server:
+  port: 8080
+
+# Application Configuration
+app:
+  claude:
+    api-key: ${ANTHROPIC_API_KEY:}
+    model: claude-3-5-sonnet-20241022
+    max-tokens: 1024
+  classification:
+    confidence-threshold: 0.75  # Below this, flag for human review
+    high-confidence: 0.90       # Auto-approve threshold
+  cors:
+    allowed-origins: http://localhost:5173
+
+# Logging
+logging:
+  level:
+    com.bank.dispute: DEBUG
+    org.hibernate.SQL: DEBUG
