@@ -1,5 +1,7 @@
 # Payment Dispute Classifier: AI Tool Documentation
 
+> **Note:** This is the original design document. Its evaluation figures (accuracy, agreement, time savings) are design-stage projections, not measured results. It also describes an auto-classify path for HIGH-confidence cases that the shipped app does not use: in the live app every result goes to an analyst for review.
+
 ## 1. User and Job-to-be-Done
 
 **Primary User:** Dispute Operations Analyst at a bank or financial institution

@@ -146,18 +146,12 @@ npm install
 ```
 
 2. **Run development server**
-### Accuracy
-- **Overall accuracy:** 94% (47/50 test cases)
-- **HIGH confidence:** 93.8% accuracy (30/32 cases)
-- **Appropriate escalation rate:** 100% for LOW confidence cases
+### Evaluation status
+- **Speed:** results returned in ≤15 seconds per case across 30 timed test disputes.
+- **Accuracy:** not yet measured. `SAMPLE_INPUTS.md` holds 8 test disputes with expected categories and confidence tiers; a labeled eval set with published results is planned.
+- The live demo is the Next.js + Gemini app. Every result is marked for analyst review, and LOW-confidence cases require a full manual review.
 
-### Business Impact
-- **75% reduction** in processing time
-- **16-point improvement** in classification consistency
-- **11-point improvement** in high-risk detection
-- **90% reduction** in training time for new analysts
-
-See [docs/ASSIGNMENT.md](./docs/ASSIGNMENT.md) for complete evaluation details.
+The figures in [docs/ASSIGNMENT.md](./docs/ASSIGNMENT.md) are design-stage projections, not measured results.
 
 ## 🎓 Portfolio Case Study
 
@@ -208,15 +202,15 @@ The key is designing for failure, not just success. Every AI system will make mi
 
 **Q: "How do you handle AI uncertainty in regulated industries?"**
 
-A: "I design confidence thresholds that create safety guardrails. In this dispute classifier, anything below 75% confidence is blocked from automation and routed to human review. This isn't just a technical choice—it's a product decision that balances efficiency with risk management. The system is optimized for high-confidence cases (90%+) while ensuring humans catch edge cases. We also log all corrections so the model improves over time."
+A: "I set confidence thresholds in code, not in the model. In this dispute classifier, every result goes to an analyst, and anything below 75% confidence is marked for mandatory full review. Where to draw those lines is a product decision that balances efficiency against risk."
 
 **Q: "How do you measure if an AI tool is actually useful?"**
 
 A: "I use a multi-layered evaluation framework:
-1. **Accuracy metrics** - Does it classify correctly? (94% in this case)
+1. **Accuracy metrics** - Does it classify correctly? (not yet measured; labeled eval set planned)
 2. **Confidence calibration** - Does it know when it's uncertain? (LOW confidence cases correctly escalated)
-3. **Human review** - Do subject matter experts agree? (95% agreement rate)
-4. **Business impact** - Does it save time/money? (75% faster, significant cost savings)
+3. **Human review** - Do subject matter experts agree? (not yet measured)
+4. **Business impact** - Does it save time/money? (≤15 seconds per case across 30 timed test disputes)
 5. **Edge cases** - Does it handle unusual scenarios?"
 
 **Q: "What happens when the AI is wrong?"**
