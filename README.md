@@ -20,12 +20,12 @@ This project demonstrates **AI Product Management** expertise in building respon
 
 ## 🏦 The User Story
 
-> "A dispute analyst at a mid-size bank reviews 50+ disputes daily. Each one requires reading unstructured text, identifying the dispute type, cross-referencing resolution playbooks, and flagging compliance requirements. This takes 10-15 minutes per case. My tool does it in seconds and surfaces the right context for the analyst to make the final call."
+> "A dispute analyst at a mid-size bank reviews 50+ disputes daily. Each one requires reading unstructured text, identifying the dispute type, cross-referencing resolution playbooks, and flagging compliance requirements. This takes an estimated 15-30 minutes per case. My tool does it in seconds and surfaces the right context for the analyst to make the final call."
 
 ### The Problem
-- **Slow:** 15-30 minutes per dispute for manual review
+- **Slow:** an estimated 15-30 minutes per dispute for manual review (estimate from research, not measured with analysts)
 - **Inconsistent:** Different analysts classify identical disputes differently
-- **Expensive:** ~$125,000/month in analyst time for a mid-size bank
+- **Expensive:** manual review ties up analyst time on every case
 - **Risky:** Missed regulatory time limits and human errors lead to financial losses
 
 ## ✨ How It Works
@@ -147,8 +147,8 @@ npm install
 
 2. **Run development server**
 ### Evaluation status
-- **Speed:** results returned in ≤15 seconds per case across 30 timed test disputes.
-- **Accuracy:** not yet measured. `SAMPLE_INPUTS.md` holds 8 test disputes with expected categories and confidence tiers; a labeled eval set with published results is planned.
+- **Speed:** results returned in ≤15 seconds per case across 30 synthetic test disputes, timed by hand.
+- **Accuracy:** not yet measured. `SAMPLE_INPUTS.md` holds 8 sample disputes (separate from the 30 timed ones) with expected categories and confidence tiers; a labeled eval set with published results is planned.
 - The live demo is the Next.js + Gemini app. Every result is marked for analyst review, and LOW-confidence cases require a full manual review.
 
 The figures in [docs/ASSIGNMENT.md](./docs/ASSIGNMENT.md) are design-stage projections, not measured results.
